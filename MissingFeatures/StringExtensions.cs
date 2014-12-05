@@ -219,5 +219,10 @@
         {
             return Regex.Replace(inputString, "<.*?>", string.Empty);
         }
+
+        public static string UrlDecode(this string input)
+        {
+            return Uri.UnescapeDataString(input);
+        }
     }
 }
