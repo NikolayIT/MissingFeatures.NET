@@ -50,9 +50,26 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="DateTimeExtensionsTests.cs" />
+    <Compile Include="DateTimeExtensions\DateTimeExtensionsTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="StringExtensionsTests.cs" />
+    <Compile Include="StringExtensions\CapitalizeFirstLetterTests.cs" />
+    <Compile Include="StringExtensions\ConvertCyrillicToLatinLettersTests.cs" />
+    <Compile Include="StringExtensions\ConvertLatinToCyrillicKeyboardTests.cs" />
+    <Compile Include="StringExtensions\GetFileExtensionTests.cs" />
+    <Compile Include="StringExtensions\GetFirstCharactersTests.cs" />
+    <Compile Include="StringExtensions\GetStringBetweenTests.cs" />
+    <Compile Include="StringExtensions\StripHtmlTagsTests.cs" />
+    <Compile Include="StringExtensions\ToBooleanTests.cs" />
+    <Compile Include="StringExtensions\ToByteArrayTests.cs" />
+    <Compile Include="StringExtensions\ToContentTypeTests.cs" />
+    <Compile Include="StringExtensions\ToDateTimeTests.cs" />
+    <Compile Include="StringExtensions\ToIntegerTests.cs" />
+    <Compile Include="StringExtensions\ToKendoSafeStringTests.cs" />
+    <Compile Include="StringExtensions\ToLongTests.cs" />
+    <Compile Include="StringExtensions\ToMd5HashTests.cs" />
+    <Compile Include="StringExtensions\ToShortTests.cs" />
+    <Compile Include="StringExtensions\ToValidLatinFileNameTests.cs" />
+    <Compile Include="StringExtensions\ToValidUsernameTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MissingFeatures\MissingFeatures.csproj">

@@ -1,10 +1,11 @@
-﻿namespace MissingFeatures.Tests
+﻿namespace MissingFeatures.Tests.DateTimeExtensions
 {
     using System;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
-    public class DateTimeExtensionsTests
+    public class GetMondayTests
     {
         [TestMethod]
         public void GetMonday_Monday()
