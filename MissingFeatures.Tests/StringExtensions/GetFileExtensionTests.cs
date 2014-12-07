@@ -1,7 +1,5 @@
 ﻿namespace MissingFeatures.Tests.StringExtensions
 {
-    using System;
-
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]

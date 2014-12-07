@@ -2,6 +2,7 @@
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    [TestClass]
     public class ToMd5HashTests
     {
         [TestMethod]

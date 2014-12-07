@@ -2,6 +2,7 @@ namespace MissingFeatures.Tests.StringExtensions
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    [TestClass]
     public class ToKendoSafeStringTests
     {
         [TestMethod]

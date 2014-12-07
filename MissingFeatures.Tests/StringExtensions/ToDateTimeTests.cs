@@ -5,6 +5,7 @@ namespace MissingFeatures.Tests.StringExtensions
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    [TestClass]
     public class ToDateTimeTests
     {
         [TestMethod]
