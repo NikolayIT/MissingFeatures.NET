@@ -68,6 +68,7 @@
     <Compile Include="StringExtensions\ToLongTests.cs" />
     <Compile Include="StringExtensions\ToMd5HashTests.cs" />
     <Compile Include="StringExtensions\ToShortTests.cs" />
+    <Compile Include="StringExtensions\ToUrlTests.cs" />
     <Compile Include="StringExtensions\ToValidLatinFileNameTests.cs" />
     <Compile Include="StringExtensions\ToValidUsernameTests.cs" />
   </ItemGroup>
