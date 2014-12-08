@@ -249,5 +249,15 @@
 
             return resultString.ToString().Trim('-');
         }
+
+        public static string MaxLengthWithEllipsis(this string stringToTrim, int maxLength)
+        {
+            if (stringToTrim == null || stringToTrim.Length <= maxLength)
+            {
+                return stringToTrim;
+            }
+
+            return stringToTrim.Substring(0, maxLength) + "...";
+        }
     }
 }
