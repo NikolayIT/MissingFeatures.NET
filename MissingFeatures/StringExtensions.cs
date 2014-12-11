@@ -225,6 +225,11 @@
             return Uri.UnescapeDataString(input);
         }
 
+        public static string UrlEncode(this string input)
+        {
+            return Uri.EscapeDataString(input);
+        }
+
         public static string ToUrl(this string uglyString)
         {
             var resultString = new StringBuilder(uglyString.Length);
