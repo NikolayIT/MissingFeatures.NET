@@ -179,25 +179,28 @@
             return fileParts.Last().Trim().ToLower();
         }
 
+        [Obsolete("Use System.Web.MimeMapping.GetMimeMapping() instead.")]
         public static string ToContentType(this string fileExtension)
         {
             var fileExtensionToContentType = new Dictionary<string, string>
                                                  {
                                                      { "jpg", "image/jpeg" },
                                                      { "jpeg", "image/jpeg" },
-                                                     { "png", "image/x-png" },
-                                                     {
-                                                         "docx",
-                                                         "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
-                                                     },
+                                                     { "png", "image/png" },
+                                                     { "gif", "image/gif" },
+                                                     { "tiff", "image/tiff" },
+                                                     { "docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" },
                                                      { "doc", "application/msword" },
                                                      { "pdf", "application/pdf" },
+                                                     { "xml", "text/xml" },
+                                                     { "html", "text/html" },
                                                      { "txt", "text/plain" },
                                                      { "rtf", "application/rtf" }
                                                  };
-            if (fileExtensionToContentType.ContainsKey(fileExtension.Trim()))
+
+            if (fileExtensionToContentType.ContainsKey(fileExtension.Trim().ToLower()))
             {
-                return fileExtensionToContentType[fileExtension.Trim()];
+                return fileExtensionToContentType[fileExtension.Trim().ToLower()];
             }
 
             return "application/octet-stream";
