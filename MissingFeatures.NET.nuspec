@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+    <metadata>
+        <id>MissingFeatures.NET</id>
+        <version>1.0.0</version>
+        <title>MissingFeatures.NET</title>
+        <authors>Nikolay.IT</authors>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <description>A .NET library containing some missing features in the .NET Framework.
+More info: https://github.com/NikolayIT/MissingFeatures.NET</description>
+    </metadata>
+    <files>
+        <file src="MissingFeatures\bin\Release\MissingFeatures.dll" target="lib\MissingFeatures.dll" />
+    </files>
+</package>
