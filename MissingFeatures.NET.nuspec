@@ -5,6 +5,7 @@
         <version>1.0.0</version>
         <title>MissingFeatures.NET</title>
         <authors>Nikolay.IT</authors>
+        <projectUrl>https://github.com/NikolayIT/MissingFeatures.NET</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A .NET library containing some missing features in the .NET Framework.
 More info: https://github.com/NikolayIT/MissingFeatures.NET</description>
