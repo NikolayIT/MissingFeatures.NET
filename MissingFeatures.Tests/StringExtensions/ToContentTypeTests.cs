@@ -51,15 +51,6 @@
         }
 
         [TestMethod]
-        public void ToContentType_TestPng_ShouldReturnImageXpng()
-        {
-            string expected = "image/x-png";
-            string fileExtension = "png";
-            string actual = fileExtension.ToContentType();
-            Assert.AreEqual(expected, actual);
-        }
-
-        [TestMethod]
         public void ToContentType_TestDocx_ShouldReturnOffice()
         {
             string expected = "application/vnd.openxmlformats-officedocument.wordprocessingml.document";
