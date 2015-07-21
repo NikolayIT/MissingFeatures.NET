@@ -6,48 +6,36 @@
 
     public class HttpClient : WebClient
     {
-        private CookieContainer cookieContainer;
-        private string userAgent;
-        private int timeout;
+        private const int DefaultTimeout = 3000;
 
         public HttpClient()
         {
-            this.timeout = 3000;
+            this.Timeout = DefaultTimeout;
             this.Encoding = Encoding.UTF8;
-            this.userAgent = string.Format("MissingFeatures.NET.HttpClient/1.0 ({0})", Environment.Version);
-            this.cookieContainer = new CookieContainer();
+            this.UserAgent = string.Format("MissingFeatures.NET.HttpClient/1.0 ({0})", Environment.Version);
+            this.CookieContainer = new CookieContainer();
         }
 
-        public CookieContainer CookieContainer
-        {
-            get { return this.cookieContainer; }
-            set { this.cookieContainer = value; }
-        }
+        public CookieContainer CookieContainer { get; set; }
 
-        public string UserAgent
-        {
-            get { return this.userAgent; }
-            set { this.userAgent = value; }
-        }
+        public string UserAgent { get; set; }
 
-        public int Timeout
-        {
-            get { return this.timeout; }
-            set { this.timeout = value; }
-        }
+        public int Timeout { get; set; }
 
         protected override WebRequest GetWebRequest(Uri address)
         {
             var request = base.GetWebRequest(address);
 
-            if (request != null && request.GetType() == typeof(HttpWebRequest))
+            var httpWebRequest = request as HttpWebRequest;
+
+            if (httpWebRequest != null)
             {
-                ((HttpWebRequest)request).CookieContainer = this.cookieContainer;
-                ((HttpWebRequest)request).UserAgent = this.userAgent;
-                request.Timeout = this.timeout;
+                httpWebRequest.CookieContainer = this.CookieContainer;
+                httpWebRequest.UserAgent = this.UserAgent;
+                httpWebRequest.Timeout = this.Timeout;
             }
 
-            return request;
+            return httpWebRequest ?? request;
         }
     }
 }
