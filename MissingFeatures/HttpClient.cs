@@ -14,7 +14,7 @@
         {
             this.timeout = 3000;
             this.Encoding = Encoding.UTF8;
-            this.userAgent = string.Format("Telerik.ILS.HttpClient/1.0 ({0})", Environment.Version);
+            this.userAgent = string.Format("MissingFeatures.NET.HttpClient/1.0 ({0})", Environment.Version);
             this.cookieContainer = new CookieContainer();
         }
 
