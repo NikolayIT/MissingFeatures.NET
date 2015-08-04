@@ -5,11 +5,6 @@
 
     public class RandomGenerator
     {
-        private const int Int32BytesCount = 4;
-        private const int Int64BytesCount = 8;
-        private const int SingleBytesCount = 4;
-        private const int DoubleBytesCount = 8;
-
         private readonly RandomNumberGenerator randomGenerator;
 
         public RandomGenerator()
@@ -19,7 +14,7 @@
 
         public int NextInt32()
         {
-            var bytes = this.GetRandomBytes(Int32BytesCount);
+            var bytes = this.GetRandomBytes(sizeof(int));
 
             var value = BitConverter.ToInt32(bytes, 0);
 
@@ -28,7 +23,7 @@
 
         public long NextInt64()
         {
-            var bytes = this.GetRandomBytes(Int64BytesCount);
+            var bytes = this.GetRandomBytes(sizeof(long));
 
             var value = BitConverter.ToInt64(bytes, 0);
 
@@ -37,7 +32,7 @@
 
         public float NextSingle()
         {
-            var bytes = this.GetRandomBytes(SingleBytesCount);
+            var bytes = this.GetRandomBytes(sizeof(float));
 
             var value = BitConverter.ToSingle(bytes, 0);
 
@@ -46,7 +41,7 @@
 
         public double NextDouble()
         {
-            var bytes = this.GetRandomBytes(DoubleBytesCount);
+            var bytes = this.GetRandomBytes(sizeof(double));
 
             var value = BitConverter.ToDouble(bytes, 0);
 
@@ -63,6 +58,29 @@
             var bytes = this.GetRandomBytes(count);
 
             return bytes;
+        }
+
+        public char NextChar()
+        {
+            var bytes = this.GetRandomBytes(sizeof(char));
+
+            var value = BitConverter.ToChar(bytes, 0);
+
+            return value;
+        }
+
+        public string NextHexString(int length)
+        {
+            if (length < 0)
+            {
+                throw new ArgumentOutOfRangeException("length", "String length cannot be negative.");
+            }
+
+            var bytes = this.GetRandomBytes(length);
+
+            var value = BitConverter.ToString(bytes);
+
+            return value;
         }
 
         private byte[] GetRandomBytes(int count)
