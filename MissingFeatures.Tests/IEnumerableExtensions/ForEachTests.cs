@@ -1,9 +1,10 @@
 ﻿namespace MissingFeatures.Tests.IEnumerableExtensions
 {
-    using Microsoft.VisualStudio.TestTools.UnitTesting;
     using System;
     using System.Collections.Generic;
     using System.Linq;
+
+    using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     [TestClass]
     public class ForEachTests
@@ -13,7 +14,7 @@
         public void TestNullSource_ShouldThrowException()
         {
             IEnumerable<int> source = null;
-            Action<int> action = (item) => { };
+            Action<int> action = item => { };
 
             source.ForEach(action);
         }
@@ -33,7 +34,7 @@
         {
             IEnumerable<int> source = new int[0];
             var actionWasInvoked = false;
-            Action<int> action = (item) => { actionWasInvoked = true; };
+            Action<int> action = item => { actionWasInvoked = true; };
 
             source.ForEach(action);
 
@@ -46,7 +47,7 @@
             IEnumerable<int> source = new[] { 1 };
             var actionWasInvoked = false;
             var actionInvocationsCount = 0;
-            Action<int> action = (item) =>
+            Action<int> action = item =>
             {
                 actionWasInvoked = true;
                 actionInvocationsCount++;
@@ -63,7 +64,7 @@
         {
             IEnumerable<int> source = new[] { 1, 10, 100, 1000 };
             var actionInvocationsCount = 0;
-            Action<int> action = (item) => { actionInvocationsCount++; };
+            Action<int> action = item => { actionInvocationsCount++; };
 
             source.ForEach(action);
 
