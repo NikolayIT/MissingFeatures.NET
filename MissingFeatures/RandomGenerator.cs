@@ -2,6 +2,7 @@
 {
     using System;
     using System.Security.Cryptography;
+    using System.Text;
 
     using MissingFeatures.Contracts;
 
@@ -81,6 +82,25 @@
             var bytes = this.GetRandomBytes(length);
 
             var value = BitConverter.ToString(bytes);
+
+            return value;
+        }
+
+        public string NextString(int length, Encoding encoding = null)
+        {
+            if (length < 0)
+            {
+                throw new ArgumentOutOfRangeException("length", "String length cannot be negative.");
+            }
+
+            var bytes = this.GetRandomBytes(length);
+
+            if (encoding == null)
+            {
+                encoding = Encoding.UTF8;
+            }
+
+            var value = encoding.GetString(bytes);
 
             return value;
         }

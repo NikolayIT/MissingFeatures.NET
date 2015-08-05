@@ -1,5 +1,7 @@
 ﻿namespace MissingFeatures.Contracts
 {
+    using System.Text;
+
     public interface IRandomGenerator
     {
         int NextInt32();
@@ -15,5 +17,7 @@
         char NextChar();
 
         string NextHexString(int length);
+
+        string NextString(int length, Encoding encoding = null);
     }
 }
