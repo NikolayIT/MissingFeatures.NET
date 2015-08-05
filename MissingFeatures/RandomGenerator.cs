@@ -3,7 +3,9 @@
     using System;
     using System.Security.Cryptography;
 
-    public class RandomGenerator
+    using MissingFeatures.Contracts;
+
+    public class RandomGenerator : IRandomGenerator
     {
         private readonly RandomNumberGenerator randomGenerator;
 
