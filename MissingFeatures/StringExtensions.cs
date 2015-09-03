@@ -102,10 +102,8 @@
             return Regex.Replace(input, @"[^a-zA-z0-9_\.\-]+", string.Empty);
         }
 
-        public static string GetFirstCharacters(this string input, int charsCount)
-        {
-            return input.Substring(0, Math.Min(input.Length, charsCount));
-        }
+        public static string GetFirstCharacters(this string input, int charsCount) => 
+            input.Substring(0, Math.Min(input.Length, charsCount));
 
         public static bool ToBoolean(this string input)
         {
@@ -171,7 +169,7 @@
             }
 
             string[] fileParts = fileName.Split(new[] { "." }, StringSplitOptions.None);
-            if (fileParts.Count() == 1 || string.IsNullOrEmpty(fileParts.Last()))
+            if (fileParts.Length == 1 || string.IsNullOrEmpty(fileParts.Last()))
             {
                 return string.Empty;
             }
@@ -213,25 +211,17 @@
             return bytesArray;
         }
 
-        public static string ToKendoSafeString(this string input)
-        {
-            return input.Replace(@"#", @"\\#");
-        }
+        public static string ToKendoSafeString(this string input) => 
+            input.Replace(@"#", @"\\#");
 
-        public static string StripHtmlTags(this string inputString)
-        {
-            return Regex.Replace(inputString, "<.*?>", string.Empty);
-        }
+        public static string StripHtmlTags(this string inputString) => 
+            Regex.Replace(inputString, "<.*?>", string.Empty);
 
-        public static string UrlDecode(this string input)
-        {
-            return Uri.UnescapeDataString(input);
-        }
+        public static string UrlDecode(this string input) => 
+            Uri.UnescapeDataString(input);
 
-        public static string UrlEncode(this string input)
-        {
-            return Uri.EscapeDataString(input);
-        }
+        public static string UrlEncode(this string input) => 
+            Uri.EscapeDataString(input);
 
         public static string ToUrl(this string uglyString)
         {
