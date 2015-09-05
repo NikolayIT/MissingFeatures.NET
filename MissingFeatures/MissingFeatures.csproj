@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Contracts\IRandomGenerator.cs" />
     <Compile Include="DateTimeExtensions.cs" />
+    <Compile Include="DirectoryHelper.cs" />
     <Compile Include="HttpClient.cs" />
     <Compile Include="IEnumerableExtensions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
