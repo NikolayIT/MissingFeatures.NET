@@ -29,12 +29,12 @@
         {
             if (source == null)
             {
-                throw new ArgumentNullException("source");
+                throw new ArgumentNullException(nameof(source));
             }
 
             if (action == null)
             {
-                throw new ArgumentNullException("action");
+                throw new ArgumentNullException(nameof(action));
             }
 
             foreach (var item in source)
@@ -43,9 +43,7 @@
             }
         }
 
-        public static bool IsNullOrEmpty<T>(this IEnumerable<T> source)
-        {
-            return source == null || !source.Any();
-        }
+        public static bool IsNullOrEmpty<T>(this IEnumerable<T> source) => 
+            source == null || !source.Any();
     }
 }
