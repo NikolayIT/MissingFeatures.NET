@@ -18,13 +18,14 @@
                 Directory.CreateDirectory(destinationDirectoryPath);
             }
 
+            // TODO: Check if the src == destination dir
             var files = sourceDirectory.GetFiles();
             foreach (var file in files)
             {
                 var newFilePath = Path.Combine(destinationDirectoryPath, file.Name);
                 if (overwriteFiles || !File.Exists(newFilePath))
                 {
-                    file.CopyTo(newFilePath, overwriteFiles);
+                    File.Copy(file.FullName, newFilePath, overwriteFiles);
                 }
             }
 
