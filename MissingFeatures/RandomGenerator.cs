@@ -55,7 +55,7 @@
         {
             if (count < 0)
             {
-                throw new ArgumentOutOfRangeException("count", "Bytes count cannot be negative.");
+                throw new ArgumentOutOfRangeException(nameof(count), "Bytes count cannot be negative.");
             }
 
             var bytes = this.GetRandomBytes(count);
@@ -76,7 +76,7 @@
         {
             if (length < 0)
             {
-                throw new ArgumentOutOfRangeException("length", "String length cannot be negative.");
+                throw new ArgumentOutOfRangeException(nameof(length), "String length cannot be negative.");
             }
 
             var bytes = this.GetRandomBytes(length);
@@ -90,7 +90,7 @@
         {
             if (length < 0)
             {
-                throw new ArgumentOutOfRangeException("length", "String length cannot be negative.");
+                throw new ArgumentOutOfRangeException(nameof(length), "String length cannot be negative.");
             }
 
             var bytes = this.GetRandomBytes(length);

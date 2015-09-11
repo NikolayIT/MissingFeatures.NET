@@ -12,7 +12,7 @@
         {
             this.Timeout = DefaultTimeout;
             this.Encoding = Encoding.UTF8;
-            this.UserAgent = string.Format("MissingFeatures.NET.HttpClient/1.0 ({0})", Environment.Version);
+            this.UserAgent = $"MissingFeatures.NET.HttpClient/1.0 ({Environment.Version})";
             this.CookieContainer = new CookieContainer();
         }
 
