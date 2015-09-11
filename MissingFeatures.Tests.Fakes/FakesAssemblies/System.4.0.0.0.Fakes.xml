@@ -1,0 +1,497 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>System.4.0.0.0.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:System.IO.Fakes.ShimErrorEventArgs">
+            <summary>Shim type of System.IO.ErrorEventArgs</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimErrorEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimErrorEventArgs.#ctor(System.IO.ErrorEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimErrorEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimErrorEventArgs.AllInstances.GetException">
+            <summary>Sets the shim of ErrorEventArgs.GetException()</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimErrorEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimErrorEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimErrorEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimErrorEventArgs.ConstructorException">
+            <summary>Sets the shim of ErrorEventArgs.ErrorEventArgs(Exception exception)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimErrorEventArgs.GetException">
+            <summary>Sets the shim of ErrorEventArgs.GetException()</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimFileSystemEventArgs">
+            <summary>Shim type of System.IO.FileSystemEventArgs</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemEventArgs.#ctor(System.IO.FileSystemEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimFileSystemEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.AllInstances.ChangeTypeGet">
+            <summary>Sets the shim of FileSystemEventArgs.get_ChangeType()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.AllInstances.FullPathGet">
+            <summary>Sets the shim of FileSystemEventArgs.get_FullPath()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.AllInstances.NameGet">
+            <summary>Sets the shim of FileSystemEventArgs.get_Name()</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.ChangeTypeGet">
+            <summary>Sets the shim of FileSystemEventArgs.get_ChangeType()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.ConstructorWatcherChangeTypesStringString">
+            <summary>Sets the shim of FileSystemEventArgs.FileSystemEventArgs(WatcherChangeTypes changeType, String directory, String name)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.FullPathGet">
+            <summary>Sets the shim of FileSystemEventArgs.get_FullPath()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemEventArgs.NameGet">
+            <summary>Sets the shim of FileSystemEventArgs.get_Name()</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimFileSystemWatcher">
+            <summary>Shim type of System.IO.FileSystemWatcher</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.#ctor(System.IO.FileSystemWatcher)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimFileSystemWatcher.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.BeginInit">
+            <summary>Sets the shim of FileSystemWatcher.BeginInit()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.ChangedAddFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Changed(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.ChangedRemoveFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Changed(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.CreatedAddFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Created(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.CreatedRemoveFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Created(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.DeletedAddFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Deleted(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.DeletedRemoveFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Deleted(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.DisposeBoolean">
+            <summary>Sets the shim of FileSystemWatcher.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.EnableRaisingEventsGet">
+            <summary>Sets the shim of FileSystemWatcher.get_EnableRaisingEvents()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.EnableRaisingEventsSetBoolean">
+            <summary>Sets the shim of FileSystemWatcher.set_EnableRaisingEvents(Boolean value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.EndInit">
+            <summary>Sets the shim of FileSystemWatcher.EndInit()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.ErrorAddErrorEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Error(ErrorEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.ErrorRemoveErrorEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Error(ErrorEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.FilterGet">
+            <summary>Sets the shim of FileSystemWatcher.get_Filter()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.FilterSetString">
+            <summary>Sets the shim of FileSystemWatcher.set_Filter(String value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.IncludeSubdirectoriesGet">
+            <summary>Sets the shim of FileSystemWatcher.get_IncludeSubdirectories()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.IncludeSubdirectoriesSetBoolean">
+            <summary>Sets the shim of FileSystemWatcher.set_IncludeSubdirectories(Boolean value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.InternalBufferSizeGet">
+            <summary>Sets the shim of FileSystemWatcher.get_InternalBufferSize()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.InternalBufferSizeSetInt32">
+            <summary>Sets the shim of FileSystemWatcher.set_InternalBufferSize(Int32 value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.NotifyFilterGet">
+            <summary>Sets the shim of FileSystemWatcher.get_NotifyFilter()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.NotifyFilterSetNotifyFilters">
+            <summary>Sets the shim of FileSystemWatcher.set_NotifyFilter(NotifyFilters value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.OnChangedFileSystemEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnChanged(FileSystemEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.OnCreatedFileSystemEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnCreated(FileSystemEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.OnDeletedFileSystemEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnDeleted(FileSystemEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.OnErrorErrorEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnError(ErrorEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.OnRenamedRenamedEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnRenamed(RenamedEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.PathGet">
+            <summary>Sets the shim of FileSystemWatcher.get_Path()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.PathSetString">
+            <summary>Sets the shim of FileSystemWatcher.set_Path(String value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.RenamedAddRenamedEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Renamed(RenamedEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.RenamedRemoveRenamedEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Renamed(RenamedEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.SiteGet">
+            <summary>Sets the shim of FileSystemWatcher.get_Site()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.SiteSetISite">
+            <summary>Sets the shim of FileSystemWatcher.set_Site(ISite value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.SynchronizingObjectGet">
+            <summary>Sets the shim of FileSystemWatcher.get_SynchronizingObject()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.SynchronizingObjectSetISynchronizeInvoke">
+            <summary>Sets the shim of FileSystemWatcher.set_SynchronizingObject(ISynchronizeInvoke value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.WaitForChangedWatcherChangeTypes">
+            <summary>Sets the shim of FileSystemWatcher.WaitForChanged(WatcherChangeTypes changeType)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.AllInstances.WaitForChangedWatcherChangeTypesInt32">
+            <summary>Sets the shim of FileSystemWatcher.WaitForChanged(WatcherChangeTypes changeType, Int32 timeout)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.BeginInit">
+            <summary>Sets the shim of FileSystemWatcher.BeginInit()</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.Bind(System.ComponentModel.IComponent)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimFileSystemWatcher.Bind(System.IDisposable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.ChangedAddFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Changed(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.ChangedRemoveFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Changed(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.Constructor">
+            <summary>Sets the shim of FileSystemWatcher.FileSystemWatcher()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.ConstructorString">
+            <summary>Sets the shim of FileSystemWatcher.FileSystemWatcher(String path)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.ConstructorStringString">
+            <summary>Sets the shim of FileSystemWatcher.FileSystemWatcher(String path, String filter)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.CreatedAddFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Created(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.CreatedRemoveFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Created(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.DeletedAddFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Deleted(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.DeletedRemoveFileSystemEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Deleted(FileSystemEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.DisposeBoolean">
+            <summary>Sets the shim of FileSystemWatcher.Dispose(Boolean disposing)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.EnableRaisingEventsGet">
+            <summary>Sets the shim of FileSystemWatcher.get_EnableRaisingEvents()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.EnableRaisingEventsSetBoolean">
+            <summary>Sets the shim of FileSystemWatcher.set_EnableRaisingEvents(Boolean value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.EndInit">
+            <summary>Sets the shim of FileSystemWatcher.EndInit()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.ErrorAddErrorEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Error(ErrorEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.ErrorRemoveErrorEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Error(ErrorEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.FilterGet">
+            <summary>Sets the shim of FileSystemWatcher.get_Filter()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.FilterSetString">
+            <summary>Sets the shim of FileSystemWatcher.set_Filter(String value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.IncludeSubdirectoriesGet">
+            <summary>Sets the shim of FileSystemWatcher.get_IncludeSubdirectories()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.IncludeSubdirectoriesSetBoolean">
+            <summary>Sets the shim of FileSystemWatcher.set_IncludeSubdirectories(Boolean value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.InternalBufferSizeGet">
+            <summary>Sets the shim of FileSystemWatcher.get_InternalBufferSize()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.InternalBufferSizeSetInt32">
+            <summary>Sets the shim of FileSystemWatcher.set_InternalBufferSize(Int32 value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.NotifyFilterGet">
+            <summary>Sets the shim of FileSystemWatcher.get_NotifyFilter()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.NotifyFilterSetNotifyFilters">
+            <summary>Sets the shim of FileSystemWatcher.set_NotifyFilter(NotifyFilters value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.OnChangedFileSystemEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnChanged(FileSystemEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.OnCreatedFileSystemEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnCreated(FileSystemEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.OnDeletedFileSystemEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnDeleted(FileSystemEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.OnErrorErrorEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnError(ErrorEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.OnRenamedRenamedEventArgs">
+            <summary>Sets the shim of FileSystemWatcher.OnRenamed(RenamedEventArgs e)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.PathGet">
+            <summary>Sets the shim of FileSystemWatcher.get_Path()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.PathSetString">
+            <summary>Sets the shim of FileSystemWatcher.set_Path(String value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.RenamedAddRenamedEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.add_Renamed(RenamedEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.RenamedRemoveRenamedEventHandler">
+            <summary>Sets the shim of FileSystemWatcher.remove_Renamed(RenamedEventHandler value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.SiteGet">
+            <summary>Sets the shim of FileSystemWatcher.get_Site()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.SiteSetISite">
+            <summary>Sets the shim of FileSystemWatcher.set_Site(ISite value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.StaticConstructor">
+            <summary>Sets the shim of FileSystemWatcher.FileSystemWatcher()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.SynchronizingObjectGet">
+            <summary>Sets the shim of FileSystemWatcher.get_SynchronizingObject()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.SynchronizingObjectSetISynchronizeInvoke">
+            <summary>Sets the shim of FileSystemWatcher.set_SynchronizingObject(ISynchronizeInvoke value)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.WaitForChangedWatcherChangeTypes">
+            <summary>Sets the shim of FileSystemWatcher.WaitForChanged(WatcherChangeTypes changeType)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimFileSystemWatcher.WaitForChangedWatcherChangeTypesInt32">
+            <summary>Sets the shim of FileSystemWatcher.WaitForChanged(WatcherChangeTypes changeType, Int32 timeout)</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimIODescriptionAttribute">
+            <summary>Shim type of System.IO.IODescriptionAttribute</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimIODescriptionAttribute.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimIODescriptionAttribute.#ctor(System.IO.IODescriptionAttribute)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimIODescriptionAttribute.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimIODescriptionAttribute.AllInstances.DescriptionGet">
+            <summary>Sets the shim of IODescriptionAttribute.get_Description()</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimIODescriptionAttribute.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimIODescriptionAttribute.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimIODescriptionAttribute.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimIODescriptionAttribute.ConstructorString">
+            <summary>Sets the shim of IODescriptionAttribute.IODescriptionAttribute(String description)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimIODescriptionAttribute.DescriptionGet">
+            <summary>Sets the shim of IODescriptionAttribute.get_Description()</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimInternalBufferOverflowException">
+            <summary>Shim type of System.IO.InternalBufferOverflowException</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInternalBufferOverflowException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInternalBufferOverflowException.#ctor(System.IO.InternalBufferOverflowException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimInternalBufferOverflowException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInternalBufferOverflowException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInternalBufferOverflowException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInternalBufferOverflowException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInternalBufferOverflowException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInternalBufferOverflowException.Constructor">
+            <summary>Sets the shim of InternalBufferOverflowException.InternalBufferOverflowException()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInternalBufferOverflowException.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of InternalBufferOverflowException.InternalBufferOverflowException(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInternalBufferOverflowException.ConstructorString">
+            <summary>Sets the shim of InternalBufferOverflowException.InternalBufferOverflowException(String message)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInternalBufferOverflowException.ConstructorStringException">
+            <summary>Sets the shim of InternalBufferOverflowException.InternalBufferOverflowException(String message, Exception inner)</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimInvalidDataException">
+            <summary>Shim type of System.IO.InvalidDataException</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInvalidDataException.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInvalidDataException.#ctor(System.IO.InvalidDataException)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimInvalidDataException.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInvalidDataException.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInvalidDataException.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInvalidDataException.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimInvalidDataException.Bind(System.Runtime.Serialization.ISerializable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInvalidDataException.Constructor">
+            <summary>Sets the shim of InvalidDataException.InvalidDataException()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInvalidDataException.ConstructorSerializationInfoStreamingContext">
+            <summary>Sets the shim of InvalidDataException.InvalidDataException(SerializationInfo info, StreamingContext context)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInvalidDataException.ConstructorString">
+            <summary>Sets the shim of InvalidDataException.InvalidDataException(String message)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimInvalidDataException.ConstructorStringException">
+            <summary>Sets the shim of InvalidDataException.InvalidDataException(String message, Exception innerException)</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimRenamedEventArgs">
+            <summary>Shim type of System.IO.RenamedEventArgs</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimRenamedEventArgs.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimRenamedEventArgs.#ctor(System.IO.RenamedEventArgs)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimRenamedEventArgs.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimRenamedEventArgs.AllInstances.OldFullPathGet">
+            <summary>Sets the shim of RenamedEventArgs.get_OldFullPath()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimRenamedEventArgs.AllInstances.OldNameGet">
+            <summary>Sets the shim of RenamedEventArgs.get_OldName()</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimRenamedEventArgs.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimRenamedEventArgs.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimRenamedEventArgs.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimRenamedEventArgs.ConstructorWatcherChangeTypesStringStringString">
+            <summary>Sets the shim of RenamedEventArgs.RenamedEventArgs(WatcherChangeTypes changeType, String directory, String name, String oldName)</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimRenamedEventArgs.OldFullPathGet">
+            <summary>Sets the shim of RenamedEventArgs.get_OldFullPath()</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimRenamedEventArgs.OldNameGet">
+            <summary>Sets the shim of RenamedEventArgs.get_OldName()</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimWaitForChangedResult">
+            <summary>Shim type of System.IO.WaitForChangedResult</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimWaitForChangedResult.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="T:System.IO.Fakes.ShimWaitForChangedResult.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimWaitForChangedResult.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:System.IO.Fakes.ShimWaitForChangedResult.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimWaitForChangedResult.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:System.IO.Fakes.ShimWaitForChangedResult.StaticConstructor">
+            <summary>Sets the shim of WaitForChangedResult.WaitForChangedResult()</summary>
+        </member>
+    </members>
+</doc>
