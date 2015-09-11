@@ -1,10 +1,8 @@
 ﻿namespace MissingFeatures.Tests.DirectoryHelper
 {
     using System.Collections.Generic;
-    using System.IO;
     using System.IO.Abstractions.TestingHelpers;
     using System.IO.Fakes;
-    using System.Linq;
 
     using Microsoft.QualityTools.Testing.Fakes;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
@@ -18,7 +16,7 @@
         - src with files in subdirectories
         - recursive = false
         - src == destination
-        - ...
+        - exact same src dirs like existing destination directory
     */
 
     [TestClass]
@@ -43,10 +41,8 @@
             using (ShimsContext.Create())
             {
                 ShimFile.Behavior = new MockFileShimBehavior(fileSystem);
-
-                File.Create(@"C:\Users\Vladislav\Desktop\test.txt");
-
-                Assert.AreEqual(3, fileSystem.AllFiles.Count());
+                // TODO: Add shim bahaviors for: Directory, FileInfo, DirectoryInfo classes
+                // TODO: Extract shim behaviors registrations to a common method
             }
         }
     }
