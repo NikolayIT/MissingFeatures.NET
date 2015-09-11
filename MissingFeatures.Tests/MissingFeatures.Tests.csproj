@@ -68,8 +68,8 @@
   <ItemGroup>
     <Compile Include="DateTimeExtensions\DateTimeExtensionsTests.cs" />
     <Compile Include="DirectoryHelper\CopyTests.cs" />
-    <Compile Include="DirectoryHelper\MockDirectoryShimBehavior.cs" />
-    <Compile Include="DirectoryHelper\MockFileShimBehavior.cs" />
+    <Compile Include="DirectoryHelper\ShimBehaviors\MockDirectoryShimBehavior.cs" />
+    <Compile Include="DirectoryHelper\ShimBehaviors\MockFileShimBehavior.cs" />
     <Compile Include="IEnumerableExtensions\ForEachTests.cs" />
     <Compile Include="IEnumerableExtensions\IsNullOrEmptyTests.cs" />
     <Compile Include="MethodInfoExtensions\CreateDelegateTests.cs" />

@@ -1,4 +1,4 @@
-﻿namespace MissingFeatures.Tests.DirectoryHelper
+﻿namespace MissingFeatures.Tests.DirectoryHelper.ShimBehaviors
 {
     using System;
     using System.IO.Abstractions;
@@ -8,23 +8,24 @@
 
     using Microsoft.QualityTools.Testing.Fakes.Shims;
 
-    public class MockFileShimBehavior : IShimBehavior
+    public class MockDirectoryShimBehavior : IShimBehavior
     {
-        private readonly MockFile mockFile;
+        private readonly MockDirectory mockDirectory;
 
-        public MockFileShimBehavior(IMockFileDataAccessor fileDataAccessor)
+        public MockDirectoryShimBehavior(IMockFileDataAccessor fileDataAccessor, FileBase fileBase, string currentDirectory)
         {
-            this.mockFile = new MockFile(fileDataAccessor);
+            this.mockDirectory = new MockDirectory(fileDataAccessor, fileBase, currentDirectory);
         }
 
         public bool TryGetShimMethod(MethodBase method, out Delegate shim)
         {
+            // TODO: think what happens when a static method is called
             if (method is MethodInfo)
             {
                 var methodParameterTypes = method.GetParameters().Select(p => p.ParameterType).ToArray();
-                var methodInfo = typeof(MockFile).GetMethod(method.Name, methodParameterTypes);
+                var methodInfo = typeof(MockDirectory).GetMethod(method.Name, methodParameterTypes);
 
-                shim = methodInfo.CreateDelegate(this.mockFile);
+                shim = methodInfo.CreateDelegate(this.mockDirectory);
                 return true;
             }
 

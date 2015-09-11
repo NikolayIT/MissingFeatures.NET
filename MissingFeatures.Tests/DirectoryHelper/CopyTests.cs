@@ -7,6 +7,8 @@
     using Microsoft.QualityTools.Testing.Fakes;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
+    using MissingFeatures.Tests.DirectoryHelper.ShimBehaviors;
+
     /* Test cases:
         - src doesn't exits
         - destination doesn't exits
@@ -16,7 +18,7 @@
         - src with files in subdirectories
         - recursive = false
         - src == destination
-        - exact same src dirs like existing destination directory
+        - exact same src dirs like existing destination directory hierarchy
     */
 
     [TestClass]
