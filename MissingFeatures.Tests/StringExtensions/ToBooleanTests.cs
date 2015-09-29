@@ -8,100 +8,89 @@
         [TestMethod]
         public void ToBoolean_TestEmptyString_ShouldReturnFalse()
         {
-            bool expected = false;
-            string str = string.Empty;
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = string.Empty;
+            var actual = str.ToBoolean();
+            Assert.AreEqual(false, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestWrongString_ShouldReturnFalse()
         {
-            bool expected = false;
-            string str = "WrongString";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "WrongString";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(false, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringTrue_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "true";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "true";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringTrueCapitalLetters_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "TRUE";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "TRUE";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringOk_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "ok";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "ok";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringOkCapitalLetters_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "OK";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "OK";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringYes_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "yes";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "yes";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringYesCapitalLetters_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "YES";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "YES";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringDa_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "да";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "да";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringDaCapitalLetters_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "ДА";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "ДА";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
 
         [TestMethod]
         public void ToBoolean_TestStringOne_ShouldReturnTrue()
         {
-            bool expected = true;
-            string str = "1";
-            bool actual = str.ToBoolean();
-            Assert.AreEqual(expected, actual);
+            var str = "1";
+            var actual = str.ToBoolean();
+            Assert.AreEqual(true, actual);
         }
     }
 }
