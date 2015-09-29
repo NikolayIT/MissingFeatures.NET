@@ -51,6 +51,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Code\ExecuteWithTimeLimitTests.cs" />
     <Compile Include="DateTimeExtensions\DateTimeExtensionsTests.cs" />
     <Compile Include="IEnumerableExtensions\ForEachTests.cs" />
     <Compile Include="IEnumerableExtensions\IsNullOrEmptyTests.cs" />
