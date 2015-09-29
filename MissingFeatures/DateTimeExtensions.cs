@@ -18,6 +18,7 @@
         /// <summary>
         /// Converts a regular DateTime to a RFC822 date string.
         /// </summary>
+        /// <param name="date">DateTime object to convert.</param>
         /// <returns>The specified date formatted as a RFC822 date string.</returns>
         public static string ToRFC822Date(this DateTime date)
         {

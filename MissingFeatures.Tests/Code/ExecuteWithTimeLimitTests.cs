@@ -4,12 +4,13 @@
 
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
-    using Code = MissingFeatures.Code;
+    using MissingFeatures;
 
     [TestClass]
     public class ExecuteWithTimeLimitTests
     {
         [TestMethod]
+        [Timeout(500)]
         public void EmptyActionShouldReturnTrue()
         {
             var result = Code.ExecuteWithTimeLimit(

@@ -102,7 +102,7 @@
             return Regex.Replace(input, @"[^a-zA-z0-9_\.\-]+", string.Empty);
         }
 
-        public static string GetFirstCharacters(this string input, int charsCount) => 
+        public static string GetFirstCharacters(this string input, int charsCount) =>
             input.Substring(0, Math.Min(input.Length, charsCount));
 
         public static bool ToBoolean(this string input)
@@ -150,7 +150,7 @@
             // and create a string.
             var builder = new StringBuilder();
 
-            // Loop through each byte of the hashed data 
+            // Loop through each byte of the hashed data
             // and format each one as a hexadecimal string.
             foreach (byte @byte in data)
             {
@@ -184,16 +184,16 @@
             return bytesArray;
         }
 
-        public static string ToKendoSafeString(this string input) => 
+        public static string ToKendoSafeString(this string input) =>
             input.Replace(@"#", @"\\#");
 
-        public static string StripHtmlTags(this string inputString) => 
+        public static string StripHtmlTags(this string inputString) =>
             Regex.Replace(inputString, "<.*?>", string.Empty);
 
-        public static string UrlDecode(this string input) => 
+        public static string UrlDecode(this string input) =>
             Uri.UnescapeDataString(input);
 
-        public static string UrlEncode(this string input) => 
+        public static string UrlEncode(this string input) =>
             Uri.EscapeDataString(input);
 
         public static string ToUrl(this string uglyString)
