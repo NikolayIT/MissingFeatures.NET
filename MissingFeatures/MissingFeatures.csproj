@@ -44,6 +44,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ByteArrayExtensions.cs" />
     <Compile Include="Code.cs" />
     <Compile Include="Contracts\IRandomGenerator.cs" />
     <Compile Include="DateTimeExtensions.cs" />
