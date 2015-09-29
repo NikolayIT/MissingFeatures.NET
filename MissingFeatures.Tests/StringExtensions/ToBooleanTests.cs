@@ -6,7 +6,7 @@
     public class ToBooleanTests
     {
         [TestMethod]
-        public void ToBoolean_TestEmptyString_ShouldReturnFalse()
+        public void ToBooleanWithEmptyStringShouldReturnFalse()
         {
             var str = string.Empty;
             var actual = str.ToBoolean();
@@ -14,7 +14,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestWrongString_ShouldReturnFalse()
+        public void ToBooleanWithWrongStringShouldReturnFalse()
         {
             var str = "WrongString";
             var actual = str.ToBoolean();
@@ -22,7 +22,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringTrue_ShouldReturnTrue()
+        public void ToBooleanWithStringTrueShouldReturnTrue()
         {
             var str = "true";
             var actual = str.ToBoolean();
@@ -30,7 +30,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringTrueCapitalLetters_ShouldReturnTrue()
+        public void ToBooleanWithStringTrueCapitalLettersShouldReturnTrue()
         {
             var str = "TRUE";
             var actual = str.ToBoolean();
@@ -38,7 +38,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringOk_ShouldReturnTrue()
+        public void ToBooleanWithStringOkShouldReturnTrue()
         {
             var str = "ok";
             var actual = str.ToBoolean();
@@ -46,7 +46,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringOkCapitalLetters_ShouldReturnTrue()
+        public void ToBooleanWithStringOkCapitalLettersShouldReturnTrue()
         {
             var str = "OK";
             var actual = str.ToBoolean();
@@ -54,7 +54,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringYes_ShouldReturnTrue()
+        public void ToBooleanWithStringYesShouldReturnTrue()
         {
             var str = "yes";
             var actual = str.ToBoolean();
@@ -62,7 +62,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringYesCapitalLetters_ShouldReturnTrue()
+        public void ToBooleanWithStringYesCapitalLettersShouldReturnTrue()
         {
             var str = "YES";
             var actual = str.ToBoolean();
@@ -70,7 +70,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringDa_ShouldReturnTrue()
+        public void ToBooleanWithStringDaShouldReturnTrue()
         {
             var str = "да";
             var actual = str.ToBoolean();
@@ -78,7 +78,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringDaCapitalLetters_ShouldReturnTrue()
+        public void ToBooleanWithStringDaCapitalLettersShouldReturnTrue()
         {
             var str = "ДА";
             var actual = str.ToBoolean();
@@ -86,7 +86,7 @@
         }
 
         [TestMethod]
-        public void ToBoolean_TestStringOne_ShouldReturnTrue()
+        public void ToBooleanWithStringOneShouldReturnTrue()
         {
             var str = "1";
             var actual = str.ToBoolean();

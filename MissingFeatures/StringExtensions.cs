@@ -1,7 +1,6 @@
 ﻿namespace MissingFeatures
 {
     using System;
-    using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
     using System.Security.Cryptography;
@@ -81,7 +80,7 @@
                                                                  "в", "ь", "ъ", "з"
                                                              };
 
-            for (int i = 0; i < latinLetters.Length; i++)
+            for (var i = 0; i < latinLetters.Length; i++)
             {
                 input = input.Replace(latinLetters[i], bulgarianRepresentationOfLatinKeyboard[i]);
                 input = input.Replace(latinLetters[i].ToUpper(), bulgarianRepresentationOfLatinKeyboard[i].ToUpper());
@@ -152,7 +151,7 @@
 
             // Loop through each byte of the hashed data
             // and format each one as a hexadecimal string.
-            foreach (byte @byte in data)
+            foreach (var @byte in data)
             {
                 builder.Append(@byte.ToString("x2"));
             }
@@ -168,7 +167,7 @@
                 return string.Empty;
             }
 
-            string[] fileParts = fileName.Split(new[] { "." }, StringSplitOptions.None);
+            var fileParts = fileName.Split(new[] { "." }, StringSplitOptions.None);
             if (fileParts.Length == 1 || string.IsNullOrEmpty(fileParts.Last()))
             {
                 return string.Empty;
@@ -199,7 +198,7 @@
         public static string ToUrl(this string uglyString)
         {
             var resultString = new StringBuilder(uglyString.Length);
-            bool isLastCharacterDash = false;
+            var isLastCharacterDash = false;
 
             uglyString = uglyString.Replace("C#", "CSharp");
             uglyString = uglyString.Replace("C++", "CPlusPlus");

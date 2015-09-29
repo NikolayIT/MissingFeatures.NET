@@ -8,17 +8,18 @@
     public class IsNullOrEmptyTests
     {
         [TestMethod]
-        public void TestNullSource_ShouldReturnTrue()
+        public void TestNullSourceShouldReturnTrue()
         {
             IEnumerable<int> source = null;
 
+            // ReSharper disable once ExpressionIsAlwaysNull
             var result = source.IsNullOrEmpty();
 
             Assert.IsTrue(result);
         }
 
         [TestMethod]
-        public void TestEmptySource_ShouldReturnTrue()
+        public void TestEmptySourceShouldReturnTrue()
         {
             IEnumerable<int> source = new int[0];
 
@@ -28,7 +29,7 @@
         }
 
         [TestMethod]
-        public void TestSourceWithOneItem_ShouldReturnFalse()
+        public void TestSourceWithOneItemShouldReturnFalse()
         {
             IEnumerable<int> source = new[] { 1 };
 
@@ -38,7 +39,7 @@
         }
 
         [TestMethod]
-        public void TestSourceWithMultipleItems_ShouldReturnFalse()
+        public void TestSourceWithMultipleItemsShouldReturnFalse()
         {
             IEnumerable<int> source = new[] { 1, 2, 3, 4, 5 };
 

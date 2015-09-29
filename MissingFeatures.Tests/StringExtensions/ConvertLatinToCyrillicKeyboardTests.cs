@@ -6,56 +6,56 @@
     public class ConvertLatinToCyrillicKeyboardTests
     {
         [TestMethod]
-        public void ConvertLatinToCyrillicKeyboard_ShouldReturnEmptyStringForEmptyString()
+        public void ConvertLatinToCyrillicKeyboardShouldReturnEmptyStringForEmptyString()
         {
-            string expected = string.Empty;
-            string value = string.Empty;
-            string actual = value.ConvertLatinToCyrillicKeyboard();
+            var expected = string.Empty;
+            var value = string.Empty;
+            var actual = value.ConvertLatinToCyrillicKeyboard();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertLatinToCyrillicKeyboard_ShouldReturnRightForWorkaround()
+        public void ConvertLatinToCyrillicKeyboardShouldReturnRightForWorkaround()
         {
-            string expected = "Воркароунд";
-            string value = "Workaround";
-            string actual = value.ConvertLatinToCyrillicKeyboard();
+            var expected = "Воркароунд";
+            var value = "Workaround";
+            var actual = value.ConvertLatinToCyrillicKeyboard();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertLatinToCyrillicKeyboard_ShouldReturnRightForExplorer()
+        public void ConvertLatinToCyrillicKeyboardShouldReturnRightForExplorer()
         {
-            string expected = "Еьплорер";
-            string value = "Explorer";
-            string actual = value.ConvertLatinToCyrillicKeyboard();
+            var expected = "Еьплорер";
+            var value = "Explorer";
+            var actual = value.ConvertLatinToCyrillicKeyboard();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertLatinToCyrillicKeyboard_ShouldReturnRightForZylenvrytqui()
+        public void ConvertLatinToCyrillicKeyboardShouldReturnRightForZylenvrytqui()
         {
-            string expected = "Зъленжрътяуи";
-            string value = "Zylenvrytqui";
-            string actual = value.ConvertLatinToCyrillicKeyboard();
+            var expected = "Зъленжрътяуи";
+            var value = "Zylenvrytqui";
+            var actual = value.ConvertLatinToCyrillicKeyboard();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertLatinToCyrillicKeyboard_ShouldReturnRightForWholeAlphabet()
+        public void ConvertLatinToCyrillicKeyboardShouldReturnRightForWholeAlphabet()
         {
-            string expected = "абцдефгхийклмнопярстужвьъз";
-            string value = "abcdefghijklmnopqrstuvwxyz";
-            string actual = value.ConvertLatinToCyrillicKeyboard();
+            var expected = "абцдефгхийклмнопярстужвьъз";
+            var value = "abcdefghijklmnopqrstuvwxyz";
+            var actual = value.ConvertLatinToCyrillicKeyboard();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertLatinToCyrillicKeyboard_ShouldReturnRightForWholeCapitalAlphabet()
+        public void ConvertLatinToCyrillicKeyboardShouldReturnRightForWholeCapitalAlphabet()
         {
-            string expected = "АБЦДЕФГХИЙКЛМНОПЯРСТУЖВЬЪЗ";
-            string value = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string actual = value.ConvertLatinToCyrillicKeyboard();
+            var expected = "АБЦДЕФГХИЙКЛМНОПЯРСТУЖВЬЪЗ";
+            var value = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var actual = value.ConvertLatinToCyrillicKeyboard();
             Assert.AreEqual(expected, actual);
         }
     }

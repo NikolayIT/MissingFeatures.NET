@@ -26,6 +26,7 @@
         [Timeout(2000)]
         public void TestEndlessLoopShouldNotBlockAndReturnFalse()
         {
+            // ReSharper disable once FunctionNeverReturns
             var result = Code.ExecuteWithTimeLimit(
                 TimeSpan.FromSeconds(1),
                 () =>

@@ -13,15 +13,16 @@
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void TestNullMethodInfo_ShouldThrowException()
+        public void TestNullMethodInfoShouldThrowException()
         {
             MethodInfo methodInfo = null;
 
+            // ReSharper disable once ExpressionIsAlwaysNull
             methodInfo.CreateDelegate();
         }
 
         [TestMethod]
-        public void TestStaticMethod_NoReturnValueAndNoParams_ShouldCreateCorrectDelegate()
+        public void TestStaticMethodWithNoReturnValueAndNoParamsShouldCreateCorrectDelegate()
         {
             var methodInfo = typeof(Tester).GetMethod(nameof(Tester.StaticNoReturnValueAndNoParams));
 
@@ -33,7 +34,7 @@
         }
 
         [TestMethod]
-        public void TestStaticMethod_NoReturnValueAndHasParams_ShouldCreateCorrectDelegate()
+        public void TestStaticMethodWithNoReturnValueAndHasParamsShouldCreateCorrectDelegate()
         {
             var methodInfo = typeof(Tester).GetMethod(nameof(Tester.StaticNoReturnValueAndHasParams));
 
@@ -45,7 +46,7 @@
         }
 
         [TestMethod]
-        public void TestStaticMethod_HasReturnValueAndNoParams_ShouldCreateCorrectDelegate()
+        public void TestStaticMethodWhichHasReturnValueAndNoParamsShouldCreateCorrectDelegate()
         {
             var methodInfo = typeof(Tester).GetMethod(nameof(Tester.StaticHasReturnValueAndNoParams));
 
@@ -57,7 +58,7 @@
         }
 
         [TestMethod]
-        public void TestStaticMethod_HasReturnValueAndHasParams_ShouldCreateCorrectDelegate()
+        public void TestStaticMethodWhichHasReturnValueAndHasParamsShouldCreateCorrectDelegate()
         {
             var methodInfo = typeof(Tester).GetMethod(nameof(Tester.StaticHasReturnValueAndHasParams));
 
@@ -69,7 +70,7 @@
         }
 
         [TestMethod]
-        public void TestInstanceMethod_NoReturnValueAndNoParams_ShouldCreateCorrectDelegate()
+        public void TestInstanceMethodWithNoReturnValueAndNoParamsShouldCreateCorrectDelegate()
         {
             var tester = new Tester();
             var methodInfo = typeof(Tester).GetMethod(nameof(tester.NoReturnValueAndNoParams));
@@ -82,7 +83,7 @@
         }
 
         [TestMethod]
-        public void TestInstanceMethod_NoReturnValueAndHasParams_ShouldCreateCorrectDelegate()
+        public void TestInstanceMethodWithNoReturnValueAndHasParamsShouldCreateCorrectDelegate()
         {
             var tester = new Tester();
             var methodInfo = typeof(Tester).GetMethod(nameof(tester.NoReturnValueAndHasParams));
@@ -95,7 +96,7 @@
         }
 
         [TestMethod]
-        public void TestInstanceMethod_HasReturnValueAndNoParams_ShouldCreateCorrectDelegate()
+        public void TestInstanceMethodWhichHasReturnValueAndNoParamsShouldCreateCorrectDelegate()
         {
             var tester = new Tester();
             var methodInfo = typeof(Tester).GetMethod(nameof(tester.HasReturnValueAndNoParams));
@@ -108,7 +109,7 @@
         }
 
         [TestMethod]
-        public void TestInstanceMethod_HasReturnValueAndHasParams_ShouldCreateCorrectDelegate()
+        public void TestInstanceMethodWhichHasReturnValueAndHasParamsShouldCreateCorrectDelegate()
         {
             var tester = new Tester();
             var methodInfo = typeof(Tester).GetMethod(nameof(tester.HasReturnValueAndHasParams));
@@ -121,7 +122,7 @@
         }
 
         [TestMethod]
-        public void TestInstanceMethod_HasReturnValueAndVariableParams_ShouldCreateCorrectDelegate()
+        public void TestInstanceMethodWhichHasReturnValueAndVariableParamsShouldCreateCorrectDelegate()
         {
             var tester = new Tester();
             var methodInfo = typeof(Tester).GetMethod(nameof(tester.HasReturnValueAndVariableParams));
