@@ -67,7 +67,6 @@
     <Compile Include="StringExtensions\StripHtmlTagsTests.cs" />
     <Compile Include="StringExtensions\ToBooleanTests.cs" />
     <Compile Include="StringExtensions\ToByteArrayTests.cs" />
-    <Compile Include="StringExtensions\ToContentTypeTests.cs" />
     <Compile Include="StringExtensions\ToDateTimeTests.cs" />
     <Compile Include="StringExtensions\ToIntegerTests.cs" />
     <Compile Include="StringExtensions\ToKendoSafeStringTests.cs" />
