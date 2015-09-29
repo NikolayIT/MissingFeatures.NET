@@ -1,14 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
     <metadata>
         <id>MissingFeatures.NET</id>
-        <version>1.0.0</version>
+        <version>1.1</version>
         <title>MissingFeatures.NET</title>
         <authors>Nikolay.IT</authors>
+        <licenseUrl>https://github.com/NikolayIT/MissingFeatures.NET/blob/master/LICENSE</licenseUrl>
         <projectUrl>https://github.com/NikolayIT/MissingFeatures.NET</projectUrl>
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <description>A .NET library containing some missing features in the .NET Framework.
 More info: https://github.com/NikolayIT/MissingFeatures.NET</description>
+        <releaseNotes>- Added `ForEach` and `IsNullOrEmpty` for `IEnumerable`
+- Added `RandomGenerator` for generating high-quality random numbers
+- Added static method `Code.ExecuteWithTimeLimit`
+- Added new extension method for byte arrays `ToStream()`
+- Implemented `CreateDelegate` with target parameter extension method for `MethodInfo` class.
+- Deleted `string.ToContentType` method (marked as Obsolete in the previous version)
+- `HttpClient` user agent string improved
+- Added assembly user agent and Google bot user agent
+- A lot of code cleanups and refactorings
+
+Contributors:
+
+- @Nikolay.IT
+- @vladislav-karamfilov</releaseNotes>
+        <tags>missing, features, extensions</tags>
     </metadata>
     <files>
         <file src="MissingFeatures\bin\Release\MissingFeatures.dll" target="lib\MissingFeatures.dll" />
