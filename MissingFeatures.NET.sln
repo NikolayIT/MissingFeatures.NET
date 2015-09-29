@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingFeatures", "MissingFeatures\MissingFeatures.csproj", "{DFD29E03-F526-415F-A78C-4A1F812A7068}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingFeatures.Tests", "MissingFeatures.Tests\MissingFeatures.Tests.csproj", "{DFED128C-DEBA-4E23-AE4A-D402E0EF397D}"
