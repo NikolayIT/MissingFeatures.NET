@@ -47,23 +47,23 @@
         [TestMethod]
         public void TestEmptySourceAndNonExistingDestination_ShouldCreateDestination()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
 
             using (ShimsContext.Create())
             {
                 this.PrepareFileSystemShims();
-                
+
                 DirectoryHelper.Copy(@"c:\empty-dir", @"c:\data\");
             }
 
-            Assert.AreEqual(directoriesBeforeCopy + 1, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(directoriesBeforeCopy + 1, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
         }
 
         [TestMethod]
         public void TestEmptySourceAndExistingDestination_ShouldDoNothing()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
@@ -72,32 +72,32 @@
                 DirectoryHelper.Copy(@"c:\empty-dir", @"c:\a");
             }
 
-            Assert.AreEqual(directoriesBeforeCopy, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         [TestMethod]
         public void TestEqualSourceAndDestination_ShouldDoNothing()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
                 this.PrepareFileSystemShims();
-                
+
                 DirectoryHelper.Copy(@"c:\test", @"c:\test");
             }
 
-            Assert.AreEqual(directoriesBeforeCopy, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         [TestMethod]
         public void TestNonEmptySourceAndNonExistingDestination_ShouldHaveCorrectDirectoriesCountAndFilesCount()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
@@ -106,15 +106,15 @@
                 DirectoryHelper.Copy(@"c:\a", @"c:\empty-dir2");
             }
 
-            Assert.AreEqual(directoriesBeforeCopy + 3, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy + 1, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy + 3, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy + 1, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         [TestMethod]
         public void TestNonEmptySourceAndExistingDestination_ShouldHaveCorrectDirectoriesCountAndFilesCount()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
@@ -123,15 +123,15 @@
                 DirectoryHelper.Copy(@"c:\a", @"c:\empty-dir");
             }
 
-            Assert.AreEqual(directoriesBeforeCopy + 2, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy + 1, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy + 2, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy + 1, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         [TestMethod]
         public void TestNonEmptySourceWithoutFilesAndExistingDestinationNonRecursive_ShouldHaveCorrectDirectoriesCountAndFilesCount()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
@@ -140,15 +140,15 @@
                 DirectoryHelper.Copy(@"c:\a", @"c:\empty-dir", false, false);
             }
 
-            Assert.AreEqual(directoriesBeforeCopy + 1, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy + 1, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         [TestMethod]
         public void TestNonEmptySourceWithFilesAndExistingDestinationNonRecursive_ShouldHaveCorrectDirectoriesCountAndFilesCount()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
@@ -157,8 +157,8 @@
                 DirectoryHelper.Copy(@"c:\test", @"c:\empty-dir", false, false);
             }
 
-            Assert.AreEqual(directoriesBeforeCopy + 1, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy + 2, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy + 1, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy + 2, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         [TestMethod]
@@ -166,7 +166,7 @@
         {
             const string DestinationTestFilePath = @"c:\a\b\c\test.txt";
 
-            var destinationTestFileContentBeforeCopy = fileSystem.GetFile(DestinationTestFilePath).TextContents;
+            var destinationTestFileContentBeforeCopy = this.fileSystem.GetFile(DestinationTestFilePath).TextContents;
 
             using (ShimsContext.Create())
             {
@@ -175,7 +175,7 @@
                 DirectoryHelper.Copy(@"c:\test", @"c:\a\b\c\");
             }
 
-            var destinationTestFileContentAfterCopy = fileSystem.GetFile(DestinationTestFilePath).TextContents;
+            var destinationTestFileContentAfterCopy = this.fileSystem.GetFile(DestinationTestFilePath).TextContents;
             Assert.AreEqual(destinationTestFileContentBeforeCopy, destinationTestFileContentAfterCopy, "Invalid file content.");
         }
 
@@ -185,7 +185,7 @@
             const string SourceTestFilePath = @"c:\test\test.txt";
             const string DestinationTestFilePath = @"c:\a\b\c\test.txt";
 
-            var sourceTestFileContentBeforeCopy = fileSystem.GetFile(SourceTestFilePath).TextContents;
+            var sourceTestFileContentBeforeCopy = this.fileSystem.GetFile(SourceTestFilePath).TextContents;
 
             using (ShimsContext.Create())
             {
@@ -194,15 +194,15 @@
                 DirectoryHelper.Copy(@"c:\test", @"c:\a\b\c\", true);
             }
 
-            var destinationTestFileContentAfterCopy = fileSystem.GetFile(DestinationTestFilePath).TextContents;
+            var destinationTestFileContentAfterCopy = this.fileSystem.GetFile(DestinationTestFilePath).TextContents;
             Assert.AreEqual(sourceTestFileContentBeforeCopy, destinationTestFileContentAfterCopy, "Invalid file content.");
         }
 
         [TestMethod]
         public void TestSimilarSourceAndDestinationDirectoryHierarchies_ShouldHaveCorrectDirectoriesCountAndFilesCount()
         {
-            var directoriesBeforeCopy = fileSystem.AllDirectories.Count();
-            var filesBeforeCopy = fileSystem.AllFiles.Count();
+            var directoriesBeforeCopy = this.fileSystem.AllDirectories.Count();
+            var filesBeforeCopy = this.fileSystem.AllFiles.Count();
 
             using (ShimsContext.Create())
             {
@@ -211,8 +211,8 @@
                 DirectoryHelper.Copy(@"c:\", @"d:\non-empty-dir\");
             }
 
-            Assert.AreEqual(directoriesBeforeCopy + 4, fileSystem.AllDirectories.Count(), "Incorrect directories count.");
-            Assert.AreEqual(filesBeforeCopy + 4, fileSystem.AllFiles.Count(), "Incorrect files count.");
+            Assert.AreEqual(directoriesBeforeCopy + 4, this.fileSystem.AllDirectories.Count(), "Incorrect directories count.");
+            Assert.AreEqual(filesBeforeCopy + 4, this.fileSystem.AllFiles.Count(), "Incorrect files count.");
         }
 
         private void PrepareFileSystemShims()
