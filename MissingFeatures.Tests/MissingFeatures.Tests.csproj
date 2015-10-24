@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>MissingFeatures.Tests</RootNamespace>
     <AssemblyName>MissingFeatures.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
@@ -17,6 +17,7 @@
     <IsCodedUITest>False</IsCodedUITest>
     <TestProjectType>UnitTest</TestProjectType>
     <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -37,19 +38,19 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.QualityTools.Testing.Fakes, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
-    <Reference Include="mscorlib.4.0.0.0.Fakes">
-      <HintPath>..\MissingFeatures.Tests.Fakes\FakesAssemblies\mscorlib.4.0.0.0.Fakes.dll</HintPath>
+    <Reference Include="mscorlib.Fakes">
+      <HintPath>..\MissingFeatures.Tests.Fakes\FakesAssemblies\mscorlib.Fakes.dll</HintPath>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.4.0.0.0.Fakes">
-      <HintPath>..\MissingFeatures.Tests.Fakes\FakesAssemblies\System.4.0.0.0.Fakes.dll</HintPath>
+    <Reference Include="System.Fakes">
+      <HintPath>..\MissingFeatures.Tests.Fakes\FakesAssemblies\System.Fakes.dll</HintPath>
     </Reference>
-    <Reference Include="System.IO.Abstractions, Version=2.0.0.116, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Abstractions.2.0.0.116\lib\net40\System.IO.Abstractions.dll</HintPath>
+    <Reference Include="System.IO.Abstractions, Version=2.0.0.117, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.2.0.0.117\lib\net40\System.IO.Abstractions.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="System.IO.Abstractions.TestingHelpers, Version=2.0.0.116, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.IO.Abstractions.TestingHelpers.2.0.0.116\lib\net40\System.IO.Abstractions.TestingHelpers.dll</HintPath>
+    <Reference Include="System.IO.Abstractions.TestingHelpers, Version=2.0.0.117, Culture=neutral, PublicKeyToken=d480b5b72fb413da, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Abstractions.TestingHelpers.2.0.0.117\lib\net40\System.IO.Abstractions.TestingHelpers.dll</HintPath>
       <Private>True</Private>
     </Reference>
   </ItemGroup>
@@ -68,8 +69,6 @@
   <ItemGroup>
     <Compile Include="DateTimeExtensions\DateTimeExtensionsTests.cs" />
     <Compile Include="DirectoryHelper\CopyTests.cs" />
-    <Compile Include="DirectoryHelper\ShimBehaviors\MockDirectoryShimBehavior.cs" />
-    <Compile Include="DirectoryHelper\ShimBehaviors\MockFileShimBehavior.cs" />
     <Compile Include="IEnumerableExtensions\ForEachTests.cs" />
     <Compile Include="IEnumerableExtensions\IsNullOrEmptyTests.cs" />
     <Compile Include="MethodInfoExtensions\CreateDelegateTests.cs" />

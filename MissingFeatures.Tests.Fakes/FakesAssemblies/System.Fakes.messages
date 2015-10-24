@@ -1,0 +1,9 @@
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for System.IO.NotifyFilters: type is an enum.
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for System.IO.ErrorEventHandler: type is a delegate.
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for System.IO.FileSystemEventHandler: type is a delegate.
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for System.IO.RenamedEventHandler: type is a delegate.
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for System.IO.WatcherChangeTypes: type is an enum.
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for FXAssembly: type is not visible to exported or assembly(System.Fakes).
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for ThisAssembly: type is not visible to exported or assembly(System.Fakes).
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for AssemblyRef: type is not visible to exported or assembly(System.Fakes).
+D:\Development\MissingFeatures.NET\MissingFeatures.Tests.Fakes\Fakes\System.fakes : warning : Cannot generate shim for <PrivateImplementationDetails>{C519B58E-6CD8-4B65-BE32-92633E98E2FE}: type is not supported because of internal limitations.

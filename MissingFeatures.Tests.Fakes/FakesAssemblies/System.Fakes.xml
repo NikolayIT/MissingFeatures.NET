@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>System.4.0.0.0.Fakes</name>
+        <name>System.Fakes</name>
     </assembly>
     <members>
         <member name="T:System.IO.Fakes.ShimErrorEventArgs">
