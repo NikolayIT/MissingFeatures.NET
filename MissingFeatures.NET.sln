@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingFeatures", "MissingF
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingFeatures.Tests", "MissingFeatures.Tests\MissingFeatures.Tests.csproj", "{DFED128C-DEBA-4E23-AE4A-D402E0EF397D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MissingFeatures.Tests.Fakes", "MissingFeatures.Tests.Fakes\MissingFeatures.Tests.Fakes.csproj", "{5D31E2A8-B68E-44A9-8ED6-A8F353D9D67D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{DFED128C-DEBA-4E23-AE4A-D402E0EF397D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DFED128C-DEBA-4E23-AE4A-D402E0EF397D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DFED128C-DEBA-4E23-AE4A-D402E0EF397D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D31E2A8-B68E-44A9-8ED6-A8F353D9D67D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D31E2A8-B68E-44A9-8ED6-A8F353D9D67D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D31E2A8-B68E-44A9-8ED6-A8F353D9D67D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D31E2A8-B68E-44A9-8ED6-A8F353D9D67D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
