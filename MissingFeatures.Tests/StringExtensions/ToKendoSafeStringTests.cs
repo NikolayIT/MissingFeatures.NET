@@ -1,4 +1,4 @@
-namespace MissingFeatures.Tests.StringExtensions
+﻿namespace MissingFeatures.Tests.StringExtensions
 {
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 

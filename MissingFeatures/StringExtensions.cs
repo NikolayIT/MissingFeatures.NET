@@ -1,7 +1,6 @@
 ﻿namespace MissingFeatures
 {
     using System;
-    using System.Collections.Generic;
     using System.Globalization;
     using System.Linq;
     using System.Security.Cryptography;
@@ -81,7 +80,7 @@
                                                                  "в", "ь", "ъ", "з"
                                                              };
 
-            for (int i = 0; i < latinLetters.Length; i++)
+            for (var i = 0; i < latinLetters.Length; i++)
             {
                 input = input.Replace(latinLetters[i], bulgarianRepresentationOfLatinKeyboard[i]);
                 input = input.Replace(latinLetters[i].ToUpper(), bulgarianRepresentationOfLatinKeyboard[i].ToUpper());
@@ -102,7 +101,7 @@
             return Regex.Replace(input, @"[^a-zA-z0-9_\.\-]+", string.Empty);
         }
 
-        public static string GetFirstCharacters(this string input, int charsCount) => 
+        public static string GetFirstCharacters(this string input, int charsCount) =>
             input.Substring(0, Math.Min(input.Length, charsCount));
 
         public static bool ToBoolean(this string input)
@@ -150,11 +149,11 @@
             // and create a string.
             var builder = new StringBuilder();
 
-            // Loop through each byte of the hashed data 
+            // Loop through each byte of the hashed data
             // and format each one as a hexadecimal string.
-            for (int i = 0; i < data.Length; i++)
+            foreach (var @byte in data)
             {
-                builder.Append(data[i].ToString("x2"));
+                builder.Append(@byte.ToString("x2"));
             }
 
             // Return the hexadecimal string.
@@ -168,40 +167,13 @@
                 return string.Empty;
             }
 
-            string[] fileParts = fileName.Split(new[] { "." }, StringSplitOptions.None);
+            var fileParts = fileName.Split(new[] { "." }, StringSplitOptions.None);
             if (fileParts.Length == 1 || string.IsNullOrEmpty(fileParts.Last()))
             {
                 return string.Empty;
             }
 
             return fileParts.Last().Trim().ToLower();
-        }
-
-        [Obsolete("Use System.Web.MimeMapping.GetMimeMapping() instead.")]
-        public static string ToContentType(this string fileExtension)
-        {
-            var fileExtensionToContentType = new Dictionary<string, string>
-                                                 {
-                                                     { "jpg", "image/jpeg" },
-                                                     { "jpeg", "image/jpeg" },
-                                                     { "png", "image/png" },
-                                                     { "gif", "image/gif" },
-                                                     { "tiff", "image/tiff" },
-                                                     { "docx", "application/vnd.openxmlformats-officedocument.wordprocessingml.document" },
-                                                     { "doc", "application/msword" },
-                                                     { "pdf", "application/pdf" },
-                                                     { "xml", "text/xml" },
-                                                     { "html", "text/html" },
-                                                     { "txt", "text/plain" },
-                                                     { "rtf", "application/rtf" }
-                                                 };
-
-            if (fileExtensionToContentType.ContainsKey(fileExtension.Trim().ToLower()))
-            {
-                return fileExtensionToContentType[fileExtension.Trim().ToLower()];
-            }
-
-            return "application/octet-stream";
         }
 
         public static byte[] ToByteArray(this string input)
@@ -211,22 +183,22 @@
             return bytesArray;
         }
 
-        public static string ToKendoSafeString(this string input) => 
+        public static string ToKendoSafeString(this string input) =>
             input.Replace(@"#", @"\\#");
 
-        public static string StripHtmlTags(this string inputString) => 
+        public static string StripHtmlTags(this string inputString) =>
             Regex.Replace(inputString, "<.*?>", string.Empty);
 
-        public static string UrlDecode(this string input) => 
+        public static string UrlDecode(this string input) =>
             Uri.UnescapeDataString(input);
 
-        public static string UrlEncode(this string input) => 
+        public static string UrlEncode(this string input) =>
             Uri.EscapeDataString(input);
 
         public static string ToUrl(this string uglyString)
         {
             var resultString = new StringBuilder(uglyString.Length);
-            bool isLastCharacterDash = false;
+            var isLastCharacterDash = false;
 
             uglyString = uglyString.Replace("C#", "CSharp");
             uglyString = uglyString.Replace("C++", "CPlusPlus");

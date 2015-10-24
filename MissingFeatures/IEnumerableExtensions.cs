@@ -9,6 +9,9 @@
         /// <summary>
         /// Shuffle algorithm as seen on page 32 in the book "Algorithms" (4th edition) by Robert Sedgewick
         /// </summary>
+        /// <param name="source">Collection to shuffle.</param>
+        /// <returns>Shuffled collection</returns>
+        /// <typeparam name="T">Collection type parameter.</typeparam>
         public static IEnumerable<T> Shuffle<T>(this IEnumerable<T> source)
         {
             var array = source.ToArray();

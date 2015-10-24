@@ -12,17 +12,9 @@
         /// <summary>
         /// The instance of the random class
         /// </summary>
-        public static Random Instance
-        {
-            get
-            {
-                if (instance == null)
-                {
-                    instance = new Random();
-                }
-
-                return instance;
-            }
-        }
+        /// <value>
+        /// The instance of the random class
+        /// </value>
+        public static Random Instance => instance ?? (instance = new Random());
     }
 }

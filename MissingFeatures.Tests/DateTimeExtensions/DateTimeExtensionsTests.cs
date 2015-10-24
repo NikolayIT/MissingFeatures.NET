@@ -8,80 +8,80 @@
     public class GetMondayTests
     {
         [TestMethod]
-        public void GetMonday_Monday()
+        public void GetMondayWhereDayOfWeekIsMonday()
         {
-            DateTime date = new DateTime(2013, 2, 11, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 11, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(date.Day, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_Tuesday()
+        public void GetMondayWhereDayOfWeekIsTuesday()
         {
-            DateTime date = new DateTime(2013, 2, 12, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 12, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(11, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_Wednesday()
+        public void GetMondayWhereDayOfWeekIsWednesday()
         {
-            DateTime date = new DateTime(2013, 2, 13, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 13, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(11, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_Thursday()
+        public void GetMondayWhereDayOfWeekIsThursday()
         {
-            DateTime date = new DateTime(2013, 2, 14, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 14, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(11, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_Friday()
+        public void GetMondayWhereDayOfWeekIsFriday()
         {
-            DateTime date = new DateTime(2013, 2, 15, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 15, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(11, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_Saturday()
+        public void GetMondayWhereDayOfWeekIsSaturday()
         {
-            DateTime date = new DateTime(2013, 2, 16, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 16, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(11, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_Sunday()
+        public void GetMondayWhereDayOfWeekIsSunday()
         {
-            DateTime date = new DateTime(2013, 2, 17, 10, 0, 0);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 17, 10, 0, 0);
+            var result = date.GetMonday();
             Assert.AreEqual(11, result.Day);
             Assert.AreEqual(date.Month, result.Month);
             Assert.AreEqual(date.Year, result.Year);
         }
 
         [TestMethod]
-        public void GetMonday_EnsureKeepingHoursMinutesAndSeconds()
+        public void GetMondayEnsureKeepingHoursMinutesAndSeconds()
         {
-            DateTime date = new DateTime(2013, 2, 17, 23, 24, 25);
-            DateTime result = date.GetMonday();
+            var date = new DateTime(2013, 2, 17, 23, 24, 25);
+            var result = date.GetMonday();
             Assert.AreEqual(date.Hour, result.Hour);
             Assert.AreEqual(date.Minute, result.Minute);
             Assert.AreEqual(date.Second, result.Second);

@@ -6,65 +6,65 @@
     public class ConvertCyrillicToLatinLettersTests
     {
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseEmptyString_ShouldReturnEmptyString()
+        public void ConvertCyrillicToLatinLettersParseEmptyStringShouldReturnEmptyString()
         {
-            string expected = string.Empty;
-            string value = string.Empty;
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = string.Empty;
+            var value = string.Empty;
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseCyrillicWokaround_ShouldReturnRightWorkaround()
+        public void ConvertCyrillicToLatinLettersParseCyrillicWokaroundShouldReturnRightWorkaround()
         {
-            string expected = "ShtURKELUT";
-            string value = "ЩЪРКЕЛЪТ";
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = "ShtURKELUT";
+            var value = "ЩЪРКЕЛЪТ";
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseCyrillicExplorer_ShouldReturnRightExplorer()
+        public void ConvertCyrillicToLatinLettersParseCyrillicExplorerShouldReturnRightExplorer()
         {
-            string expected = "Lyulyak";
-            string value = "Люляк";
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = "Lyulyak";
+            var value = "Люляк";
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseCyrillicAlphabet_ShouldReturnRightAlphabet()
+        public void ConvertCyrillicToLatinLettersParseCyrillicAlphabetShouldReturnRightAlphabet()
         {
-            string expected = "abvgdejziyklmnoprstufhcchshshtuiyuya";
-            string value = "абвгдежзийклмнопрстуфхцчшщъьюя";
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = "abvgdejziyklmnoprstufhcchshshtuiyuya";
+            var value = "абвгдежзийклмнопрстуфхцчшщъьюя";
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseCyrillicAlphabetCapitalLetters_ShouldReturnRightAlphabetCapitalLetters()
+        public void ConvertCyrillicToLatinLettersParseCyrillicAlphabetCapitalLettersShouldReturnRightAlphabetCapitalLetters()
         {
-            string expected = "ABVGDEJZIYKLMNOPRSTUFHCChShShtUIYuYa";
-            string value = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ";
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = "ABVGDEJZIYKLMNOPRSTUFHCChShShtUIYuYa";
+            var value = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯ";
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseTwoAlphabetCapitalLetters_ShouldReturnRightTwoAlphabetCapitalLetters()
+        public void ConvertCyrillicToLatinLettersParseTwoAlphabetCapitalLettersShouldReturnRightTwoAlphabetCapitalLetters()
         {
-            string expected = "ABVGDEJZIYKLMNOPRSTUFHCChShShtUIYuYaABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string value = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = "ABVGDEJZIYKLMNOPRSTUFHCChShShtUIYuYaABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var value = "АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЬЮЯABCDEFGHIJKLMNOPQRSTUVWXYZ";
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void ConvertCyrillicToLatinLetters_ParseTwoAlphabetSmallLetters_ShouldReturnRightTwoAlphabetSmallLetters()
+        public void ConvertCyrillicToLatinLettersParseTwoAlphabetSmallLettersShouldReturnRightTwoAlphabetSmallLetters()
         {
-            string expected = "abvgdejziyklmnoprstufhcchshshtuiyuyaabcdefghijklmnopqrstuvwxyz";
-            string value = "абвгдежзийклмнопрстуфхцчшщъьюяabcdefghijklmnopqrstuvwxyz";
-            string actual = value.ConvertCyrillicToLatinLetters();
+            var expected = "abvgdejziyklmnoprstufhcchshshtuiyuyaabcdefghijklmnopqrstuvwxyz";
+            var value = "абвгдежзийклмнопрстуфхцчшщъьюяabcdefghijklmnopqrstuvwxyz";
+            var actual = value.ConvertCyrillicToLatinLetters();
             Assert.AreEqual(expected, actual);
         }
     }

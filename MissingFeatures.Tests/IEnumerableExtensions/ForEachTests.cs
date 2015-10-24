@@ -11,26 +11,28 @@
     {
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void TestNullSource_ShouldThrowException()
+        public void TestNullSourceShouldThrowException()
         {
             IEnumerable<int> source = null;
             Action<int> action = item => { };
 
+            // ReSharper disable once ExpressionIsAlwaysNull
             source.ForEach(action);
         }
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentNullException))]
-        public void TestNullAction_ShouldThrowException()
+        public void TestNullActionShouldThrowException()
         {
             IEnumerable<int> source = new[] { 1, 2, 3, 4, 5 };
             Action<int> action = null;
 
+            // ReSharper disable once ExpressionIsAlwaysNull
             source.ForEach(action);
         }
 
         [TestMethod]
-        public void TestEmptySource_ShouldNotInvokeAction()
+        public void TestEmptySourceShouldNotInvokeAction()
         {
             IEnumerable<int> source = new int[0];
             var actionWasInvoked = false;
@@ -42,7 +44,7 @@
         }
 
         [TestMethod]
-        public void TestOneItemSource_ShouldInvokeActionOnce()
+        public void TestOneItemSourceShouldInvokeActionOnce()
         {
             IEnumerable<int> source = new[] { 1 };
             var actionWasInvoked = false;
@@ -60,7 +62,7 @@
         }
 
         [TestMethod]
-        public void TestMultipleItemsSource_ShouldInvokeActionMultipleTimes()
+        public void TestMultipleItemsSourceShouldInvokeActionMultipleTimes()
         {
             IEnumerable<int> source = new[] { 1, 10, 100, 1000 };
             var actionInvocationsCount = 0;

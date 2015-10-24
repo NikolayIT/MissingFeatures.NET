@@ -5,17 +5,25 @@
 
     internal class Tester
     {
-        public static void StaticNoReturnValueAndNoParams() { }
+        public static void StaticNoReturnValueAndNoParams()
+        {
+        }
 
-        public static void StaticNoReturnValueAndHasParams(int a) { }
+        public static void StaticNoReturnValueAndHasParams(int a)
+        {
+        }
 
         public static DateTime StaticHasReturnValueAndNoParams() => DateTime.Now;
 
         public static Tester StaticHasReturnValueAndHasParams(int a, string b) => null;
 
-        public void NoReturnValueAndNoParams() { }
+        public void NoReturnValueAndNoParams()
+        {
+        }
 
-        public void NoReturnValueAndHasParams(TimeSpan a) { }
+        public void NoReturnValueAndHasParams(TimeSpan a)
+        {
+        }
 
         public string HasReturnValueAndNoParams() => null;
 

@@ -101,7 +101,6 @@
             }
 
             var value = encoding.GetString(bytes);
-
             return value;
         }
 
