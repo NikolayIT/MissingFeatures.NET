@@ -13,29 +13,32 @@
                 throw new ArgumentException("Source directory not found on file system.", nameof(sourceDirectoryPath));
             }
 
-            if (!Directory.Exists(destinationDirectoryPath))
+            var destinationDirectoryFullPath = Path.GetFullPath(destinationDirectoryPath);
+            if (destinationDirectoryFullPath != sourceDirectory.FullName)
             {
-                Directory.CreateDirectory(destinationDirectoryPath);
-            }
-
-            // TODO: Check if the src == destination dir
-            var files = sourceDirectory.GetFiles();
-            foreach (var file in files)
-            {
-                var newFilePath = Path.Combine(destinationDirectoryPath, file.Name);
-                if (overwriteFiles || !File.Exists(newFilePath))
+                if (!Directory.Exists(destinationDirectoryFullPath))
                 {
-                    File.Copy(file.FullName, newFilePath, overwriteFiles);
+                    Directory.CreateDirectory(destinationDirectoryFullPath);
                 }
-            }
 
-            if (recursive)
-            {
-                var subDirectories = sourceDirectory.GetDirectories();
-                foreach (var directory in subDirectories)
+                var files = sourceDirectory.GetFiles();
+                foreach (var file in files)
                 {
-                    var newDirectoryPath = Path.Combine(destinationDirectoryPath, directory.Name);
-                    Copy(directory.FullName, newDirectoryPath, overwriteFiles);
+                    var newFilePath = Path.Combine(destinationDirectoryFullPath, file.Name);
+                    if (overwriteFiles || !File.Exists(newFilePath))
+                    {
+                        File.Copy(file.FullName, newFilePath, overwriteFiles);
+                    }
+                }
+
+                if (recursive)
+                {
+                    var subDirectories = sourceDirectory.GetDirectories();
+                    foreach (var directory in subDirectories)
+                    {
+                        var newDirectoryPath = Path.Combine(destinationDirectoryFullPath, directory.Name);
+                        Copy(directory.FullName, newDirectoryPath, overwriteFiles);
+                    }
                 }
             }
         }
