@@ -16,10 +16,7 @@
             var destinationDirectoryFullPath = Path.GetFullPath(destinationDirectoryPath);
             if (destinationDirectoryFullPath != sourceDirectory.FullName)
             {
-                if (!Directory.Exists(destinationDirectoryFullPath))
-                {
-                    Directory.CreateDirectory(destinationDirectoryFullPath);
-                }
+                Directory.CreateDirectory(destinationDirectoryFullPath);
 
                 var files = sourceDirectory.GetFiles();
                 foreach (var file in files)
@@ -31,13 +28,17 @@
                     }
                 }
 
-                if (recursive)
+                var subDirectories = sourceDirectory.GetDirectories();
+                foreach (var directory in subDirectories)
                 {
-                    var subDirectories = sourceDirectory.GetDirectories();
-                    foreach (var directory in subDirectories)
+                    var newDirectoryPath = Path.Combine(destinationDirectoryFullPath, directory.Name);
+                    if (recursive)
                     {
-                        var newDirectoryPath = Path.Combine(destinationDirectoryFullPath, directory.Name);
                         Copy(directory.FullName, newDirectoryPath, overwriteFiles);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(newDirectoryPath);
                     }
                 }
             }
