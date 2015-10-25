@@ -1,5 +1,7 @@
 ﻿namespace MissingFeatures.Tests.RandomGenerator
 {
+    using System.Text;
+
     using Microsoft.VisualStudio.TestTools.UnitTesting;
 
     using RandomGenerator = MissingFeatures.RandomGenerator;
@@ -8,11 +10,20 @@
     public class NextStringTests
     {
         [TestMethod]
-        public void NextStringShouldReturnStringWithSameNumberOfCharactersAsMethodParameter()
+        public void NextStringShouldReturnStringWithLessThanOrTheSameNumberOfCharactersAsMethodParameterWhenNoEncodingIsSpecified()
+        {
+            const int MaxNumberOfCharacters = 7;
+            var randomGenerator = new RandomGenerator();
+            var result = randomGenerator.NextString(MaxNumberOfCharacters);
+            Assert.IsTrue(result.Length <= MaxNumberOfCharacters);
+        }
+
+        [TestMethod]
+        public void NextStringShouldReturnStringWithTheSameNumberOfCharactersAsMethodParameterWhenAsciiEncodingIsUsed()
         {
             const int NumberOfCharacters = 7;
             var randomGenerator = new RandomGenerator();
-            var result = randomGenerator.NextString(NumberOfCharacters);
+            var result = randomGenerator.NextString(NumberOfCharacters, Encoding.ASCII);
             Assert.AreEqual(NumberOfCharacters, result.Length);
         }
     }
