@@ -21,10 +21,10 @@
         [TestMethod]
         public void NextStringShouldReturnStringWithTheSameNumberOfCharactersAsMethodParameterWhenAsciiEncodingIsUsed()
         {
-            const int MaxNumberOfCharacters = 7;
+            const int NumberOfCharacters = 7;
             var randomGenerator = new RandomGenerator();
-            var result = randomGenerator.NextString(MaxNumberOfCharacters, Encoding.ASCII);
-            Assert.AreEqual(MaxNumberOfCharacters, result.Length);
+            var result = randomGenerator.NextString(NumberOfCharacters, Encoding.ASCII);
+            Assert.AreEqual(NumberOfCharacters, result.Length);
         }
     }
 }
