@@ -18,6 +18,6 @@
 
         string NextHexString(int length);
 
-        string NextString(int length, Encoding encoding = null);
+        string NextString(int maxLength, Encoding encoding = null);
     }
 }

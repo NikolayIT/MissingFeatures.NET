@@ -86,14 +86,25 @@
             return value;
         }
 
-        public string NextString(int length, Encoding encoding = null)
+        /// <summary>
+        /// Retrieves a string of random characters with maximum length <paramref name="maxLength"/>
+        /// and in character encoding <paramref name="encoding"/>. If no encoding is specified
+        /// UTF8 is used.
+        /// </summary>
+        /// <param name="maxLength">The maximum length of the result string.</param>
+        /// <param name="encoding">The character encoding of the result string's characters.</param>
+        /// <returns>
+        /// A string of random characters with specified maximum length <paramref name="maxLength"/>
+        /// and in the specified character encoding <paramref name="encoding"/>.
+        /// </returns>
+        public string NextString(int maxLength, Encoding encoding = null)
         {
-            if (length < 0)
+            if (maxLength < 0)
             {
-                throw new ArgumentOutOfRangeException(nameof(length), "String length cannot be negative.");
+                throw new ArgumentOutOfRangeException(nameof(maxLength), "String length cannot be negative.");
             }
 
-            var bytes = this.GetRandomBytes(length);
+            var bytes = this.GetRandomBytes(maxLength);
 
             if (encoding == null)
             {
