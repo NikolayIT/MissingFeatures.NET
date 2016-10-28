@@ -18,7 +18,7 @@
                 return string.Empty;
             }
 
-            var startPosition = input.IndexOf(startString, startFrom, StringComparison.Ordinal) + startString.Length;
+            var startPosition = input.IndexOf(startString, StringComparison.Ordinal) + startString.Length;
             if (startPosition == -1)
             {
                 return string.Empty;
@@ -40,7 +40,7 @@
                 return input;
             }
 
-            return input.Substring(0, 1).ToUpper(CultureInfo.CurrentCulture) + input.Substring(1, input.Length - 1);
+            return input.Substring(0, 1).ToUpper(CultureInfo.CurrentCulture) + input.Substring(1);
         }
 
         public static string ConvertCyrillicToLatinLetters(this string input)
