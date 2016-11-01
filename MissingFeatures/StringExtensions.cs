@@ -12,7 +12,6 @@
         public static string GetStringBetween(this string input, string startString, string endString, int startFrom = 0)
         {
             input = input.Substring(startFrom);
-            startFrom = 0;
             if (!input.Contains(startString) || !input.Contains(endString))
             {
                 return string.Empty;
